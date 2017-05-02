@@ -1,0 +1,34 @@
+﻿生成启动时间为 2016/9/19 18:53:01。
+     1>项目“E:\robo\XWRobot\XWRobot.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“.\Release\XWRobot.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Release\XWRobot.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt XWRobotDlg.cpp
+         XWRobotDlg.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\XWRobot.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:".\Release\XWRobot.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"E:\robo\XWRobot\Release\XWRobot.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\XWRobot.lib" /MACHINE:X86 .\Release\XWRobot.res
+         .\Release\StdAfx.obj
+         .\Release\XWRobot.obj
+         .\Release\XWRobotDlg.obj
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_GetErrorInfo@12，该符号在函数 "private: int __thiscall CXWRobotDlg::ShowErrorInformation(unsigned long)" (?ShowErrorInformation@CXWRobotDlg@@AAEHK@Z) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_SetPositionProfile@24，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONModeSettings(void)" (?OnBUTTONModeSettings@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_SetOperationMode@16，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONModeSettings(void)" (?OnBUTTONModeSettings@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_ClearFault@12，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONModeSettings(void)" (?OnBUTTONModeSettings@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_SetDisableState@12，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONADisable(void)" (?OnBUTTONADisable@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_SetEnableState@12，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONAEnable(void)" (?OnBUTTONAEnable@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_GetFaultState@16，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONAEnable(void)" (?OnBUTTONAEnable@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_CloseDevice@8，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONOpenDevice(void)" (?OnBUTTONOpenDevice@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_OpenDeviceDlg@4，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONOpenDevice(void)" (?OnBUTTONOpenDevice@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_GetPositionIs@16，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONDeviceSettings(void)" (?OnBUTTONDeviceSettings@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_HaltPositionMovement@12，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONHalt(void)" (?OnBUTTONHalt@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_GetEnableState@16，该符号在函数 "private: int __thiscall CXWRobotDlg::UpdateStatus(void)" (?UpdateStatus@CXWRobotDlg@@AAEHXZ) 中被引用
+     1>XWRobotDlg.obj : error LNK2019: 无法解析的外部符号 _VCS_MoveToPosition@24，该符号在函数 "protected: void __thiscall CXWRobotDlg::OnBUTTONStop(void)" (?OnBUTTONStop@CXWRobotDlg@@IAEXXZ) 中被引用
+     1>.\Release\XWRobot.exe : fatal error LNK1120: 13 个无法解析的外部命令
+     1>已完成生成项目“E:\robo\XWRobot\XWRobot.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.70

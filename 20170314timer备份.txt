@@ -1,0 +1,410 @@
+{
+			
+			if(PauseIndex)
+			{
+				
+				if(FirstIndex)
+				{					
+					m_LF.SetPos((int)(SWalkLF[i]*pi/1560));
+					m_RF.SetPos((int)(SWalkRF[i]*pi/1560));
+					m_LH.SetPos((int)(SWalkLH[i]*pi/1560));
+					m_RH.SetPos((int)(SWalkRH[i]*pi/1560));
+					if(stop_time<60)
+						{	stop_time++;}
+					else
+						{
+					# if ver==0
+						if(i==0 && adj<=adj_turn)//准备抬RH:要求p>200,r<-400
+						{
+							if(m_pitnum<400 || m_rollnum>-400)
+							{				
+								LFH_adj+=500;//短
+								LFK_adj=3*LFH_adj;
+								RHH_adj-=500;//长
+								RHK_adj=3*RHH_adj;
+								adj_flag=0;
+								adjed_flag++;//调整过的次数
+							}
+							else
+							{
+								//LFH_adj=0;
+								//LFK_adj=3*LFH_adj;
+								//RHH_adj=0;
+								//RHK_adj=3*RHH_adj;  //先试试调整后不变
+								adj_flag++;//达到目的的维持次数
+							}
+						adj++;//调整次数
+						}
+						if(i==21 && adj<=adj_turn)//准备抬RF:要求p<-200,r<-400
+						{
+							if(adj_flag<0){//之前设定adj_flag=-5，所以过5次调整
+								LFH_adj-=500;//短-
+								LFK_adj=3*LFH_adj;
+								RHH_adj+=500;//长-
+								RHK_adj=3*RHH_adj;
+								adj_flag++;
+								//这个部分可以加上反馈，变成维持水平（于地面
+							}
+							else if(m_pitnum>-400 || m_rollnum>-400)
+							{	LFH_adj=0;//保证还原……
+								LFK_adj=3*LFH_adj;
+								RHH_adj=0;
+								RHK_adj=3*RHH_adj;
+
+								LHH_adj+=500;//短
+								LHK_adj=3*LHH_adj;
+								RFH_adj=0;//
+								//RFH_adj-=500;//长
+								RFK_adj-=800;//
+								//RFK_adj=3*RFH_adj;
+								adj_flag=0;
+								adjed_flag++;//调整过的次数
+							}
+							else
+							{
+								adj_flag++;//达到目的的维持次数
+							}
+						adj++;//调整次数
+						}
+
+					# endif
+
+				    # if ver==0
+					if(!VCS_MoveToPosition(m_KeyHandle,1,((long)SWalkLF[i]+LFH_adj+LFHS)*1,1,m_oImmediately,&m_dErrorCode))//中间的1表示“绝对”运动    //-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			//	}//not tryed yet	
+					if(!VCS_MoveToPosition(m_KeyHandle,3,((long)SWalkRF[i]*(1)+RFH_adj+RFHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+		     		if(!VCS_MoveToPosition(m_KeyHandle,7,((long)SWalkLH[i]*(-1)-LHH_adj+LHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			        if(!VCS_MoveToPosition(m_KeyHandle,5,((long)SWalkRH[i]*(-1)-RHH_adj+RHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+
+					if(!VCS_MoveToPosition(m_KeyHandle,2,((long)SWLFK[i]+LFK_adj+LFKS)*(1),1,m_oImmediately,&m_dErrorCode))//-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}			
+			    	if(!VCS_MoveToPosition(m_KeyHandle,4,((long)SWRFK[i]*(-1)-RFK_adj+RFKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,8,((long)SWLHK[i]*(1)+LHK_adj+LHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,6,((long)SWRHK[i]*(-1)-RHK_adj+RHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					# else
+					if(!VCS_MoveToPosition(m_KeyHandle,1,((long)SWalkLF[i]+LFHS)*1,1,m_oImmediately,&m_dErrorCode))//中间的1表示“绝对”运动    //-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			//	}//not tryed yet	
+					if(!VCS_MoveToPosition(m_KeyHandle,3,((long)SWalkRF[i]*(1)+RFHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+		     		if(!VCS_MoveToPosition(m_KeyHandle,7,((long)SWalkLH[i]*(-1)+LHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			        if(!VCS_MoveToPosition(m_KeyHandle,5,((long)SWalkRH[i]*(-1)+RHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+
+					if(!VCS_MoveToPosition(m_KeyHandle,2,((long)SWLFK[i]+LFKS)*(1),1,m_oImmediately,&m_dErrorCode))//-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}			
+			    	if(!VCS_MoveToPosition(m_KeyHandle,4,((long)SWRFK[i]*(-1)+RFKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,8,((long)SWLHK[i]*(1)+LHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,6,((long)SWRHK[i]*(-1)+RHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					# endif
+# if ver==0
+if(i==21 || i==0 )//|| i==(Stime-1))//这里改了，主意看看对不对 时间节点也需要检查
+{
+	char s[130]=" ";
+	sprintf(s,"i=%3d;adj_flag=%6d;adjed_flag=%6d if_1;m_pitnum=%3d;m_rollnum=%3d",i,adj_flag,(adjed_flag),m_pitnum,m_rollnum);
+	OutputDebugString("\n ");
+	OutputDebugString((LPCSTR)s);
+if(adj_flag>3)//完成稳定再动
+{
+	adj=0;//调整次数归零
+	adj_flag=-adjed_flag;//成功次数归零//同时用来还原
+	adjed_flag=0;
+# endif
+		i++;
+# if ver==0
+}
+}
+else 
+{i++;}
+# endif
+}
+					if(i==Stime)
+					{
+						FirstIndex=0;
+						i=0;
+					}
+					m_Hip1=(long)SWalkLF[i];
+					m_Knee1=(long)SWLFK[i];
+					UpdateData(false);
+				}
+				else//这里是循环形态
+				{	
+					m_LF.SetPos((int)(WalkLF[i]*pi/1560));
+					m_RF.SetPos((int)(WalkRF[i]*pi/1560));
+					m_LH.SetPos((int)(WalkLH[i]*pi/1560));
+					m_RH.SetPos((int)(WalkRH[i]*pi/1560));
+# if ver==0
+						if(i==0 && adj<=adj_turn)//准备抬LH:要求p>400,r>500
+						{
+							if(adj_flag<0){//恢复期
+								LHH_adj-=500;//短-
+								LHK_adj=3*LHH_adj;
+								//RFH_adj+=500;//长-
+								RFK_adj+=800;
+								//RFK_adj=3*RFH_adj;
+								adj_flag++;
+							}
+							else if(m_pitnum<50 || m_rollnum<200)
+							{	LHH_adj=0;//还原
+								LHK_adj=3*LHH_adj;
+								RFH_adj=0;//
+								RFK_adj=3*RFH_adj;
+
+								RFH_adj=0;//RF靠前，Hip接近极限
+								//RFH_adj+=500;//短
+								RFK_adj+=800;
+								//RFK_adj=3*RFH_adj;
+								LHH_adj-=500;//长
+								LHK_adj=0;//靠后，动hip往前推
+								//LHK_adj=3*LHH_adj;
+								adj_flag=0;
+								adjed_flag++;//调整过的次数
+							}
+							else
+							{
+								adj_flag++;//达到目的的维持次数
+							}
+						adj++;//调整次数
+						}
+						if(i==21 && adj<=adj_turn)//准备抬LF:要求p<-300,r>450
+						{
+							if(adj_flag<0){//之前设定adj_flag=-5，所以过5次调整
+								//RFH_adj-=500;//短-
+								RFK_adj-=800;
+								//RFK_adj=3*RFH_adj;
+								LHH_adj+=500;//长-
+								//LHK_adj=3*LHH_adj;
+								adj_flag++;
+							}
+							else if(m_pitnum>-100 || m_rollnum<200)
+							{	RFH_adj=0;//还原
+								RFK_adj=3*RFH_adj;
+								LHH_adj=0;//
+								LHK_adj=3*LHH_adj;
+
+								RHH_adj+=500;//短
+								RHK_adj=3*RHH_adj;//位置靠中，可以直接收？
+								LFH_adj=0;//LFH_adj-=500;//长(看实验结果决定改不改
+								//这里动knee方便往后按，抬前腿
+								LFK_adj-=1000;//LFK_adj=3*LFH_adj;
+								adj_flag=0;
+								adjed_flag++;//调整过的次数
+							}
+							else
+							{
+								adj_flag++;//达到目的的维持次数
+							}
+						adj++;//调整次数
+						}
+						if(i==41 && adj<=adj_turn)//准备抬RH:要求p>200,r<-450
+						{
+							if(adj_flag<0){//
+								RHH_adj-=500;//短-
+								RHK_adj=3*RHH_adj;
+								//LFH_adj+=500;//长-
+								LFK_adj+=1000;//LFK_adj=3*LFH_adj;
+								adj_flag++;
+							}
+							else if( m_pitnum<100 ||m_rollnum>-200)//(m_pitnum<10 || m_rollnum>-200)
+							{	RHH_adj=0;//还原
+								RHK_adj=3*RHH_adj;
+								LFH_adj=0;//
+								LFK_adj=3*LFH_adj;
+
+								LFH_adj=0;
+								//LFH_adj+=500;//短//这条腿刚踩下来，很靠前，hip接近极限
+								LFK_adj+=1000;
+								//LFK_adj=3*LFH_adj;
+								RHH_adj-=800;//长//单动hip往前顶
+								RHK_adj=0;//RHK_adj=3*RHH_adj;
+								adj_flag=0;
+								adjed_flag++;//调整过的次数
+							}
+							else
+							{
+								adj_flag++;//达到目的的维持次数
+							}
+						adj++;//调整次数
+						}
+						if(i==61 && adj<=adj_turn)//准备抬RF:要求p<-200,r<-400
+						{
+							if(adj_flag<0){//
+								//LFH_adj-=500;//短-
+								LFK_adj-=1000;
+								//LFK_adj=3*LFH_adj;
+								RHH_adj+=800;//长-
+								//RHK_adj=3*RHH_adj;
+								adj_flag++;
+							}
+							else if(m_pitnum>-100 || m_rollnum>-400)
+							{	
+								LFH_adj=0;//还原
+								LFK_adj=3*LFH_adj;
+								RHH_adj=0;//
+								RHK_adj=3*RHH_adj;
+
+								LHH_adj+=500;//短
+								LHK_adj=3*LHH_adj;
+								RFH_adj=0;//RFH_adj-=500;//长
+								RFK_adj-=800;//RFK_adj=3*RFH_adj;
+								adj_flag=0;
+								adjed_flag++;//调整过的次数
+							}
+							else
+							{
+								adj_flag++;//达到目的的维持次数
+							}
+						adj++;//调整次数
+						}
+
+# endif
+				    # if ver==0
+					if(!VCS_MoveToPosition(m_KeyHandle,1,((long)WalkLF[i]+LFH_adj+LFHS)*1,1,m_oImmediately,&m_dErrorCode))//中间的1表示“绝对”运动    //-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			//	}//not tryed yet	
+					if(!VCS_MoveToPosition(m_KeyHandle,3,((long)WalkRF[i]*(1)+RFH_adj+RFHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+		     		if(!VCS_MoveToPosition(m_KeyHandle,7,((long)WalkLH[i]*(-1)-LHH_adj+LHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			        if(!VCS_MoveToPosition(m_KeyHandle,5,((long)WalkRH[i]*(-1)-RHH_adj+RHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+
+					if(!VCS_MoveToPosition(m_KeyHandle,2,((long)WLFK[i]+LFK_adj+LFKS)*(1),1,m_oImmediately,&m_dErrorCode))//-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}			
+			    	if(!VCS_MoveToPosition(m_KeyHandle,4,((long)WRFK[i]*(-1)-RFK_adj+RFKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,8,((long)WLHK[i]*(1)+LHK_adj+LHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,6,((long)WRHK[i]*(-1)-RHK_adj+RHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					# else
+					if(!VCS_MoveToPosition(m_KeyHandle,1,((long)WalkLF[i]+LFHS)*1,1,m_oImmediately,&m_dErrorCode))//中间的1表示“绝对”运动    //-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			//	}//not tryed yet	
+					if(!VCS_MoveToPosition(m_KeyHandle,3,((long)WalkRF[i]*(1)+RFHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+		     		if(!VCS_MoveToPosition(m_KeyHandle,7,((long)WalkLH[i]*(-1)+LHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+			        if(!VCS_MoveToPosition(m_KeyHandle,5,((long)WalkRH[i]*(-1)+RHHS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+
+					if(!VCS_MoveToPosition(m_KeyHandle,2,((long)WLFK[i]+LFKS)*(1),1,m_oImmediately,&m_dErrorCode))//-1
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}			
+			    	if(!VCS_MoveToPosition(m_KeyHandle,4,((long)WRFK[i]*(-1)+RFKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,8,((long)WLHK[i]*(1)+LHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					if(!VCS_MoveToPosition(m_KeyHandle,6,((long)WRHK[i]*(-1)+RHKS),1,m_oImmediately,&m_dErrorCode))
+					{
+			            ShowErrorInformation(m_dErrorCode);
+					}
+					# endif
+# if ver==0
+if(i==0 || i==21 ||i==41 || i==61 )// || i==(Ltime-1))
+{
+	char s[130]=" ";
+	sprintf(s,"i=%3d;adj_flag=%6d;adjed_flag=%6d in if 2;m_pitnum=%3d;m_rollnum=%3d",i,adj_flag,(adjed_flag),m_pitnum,m_rollnum);
+	OutputDebugString("\n ");
+	OutputDebugString((LPCSTR)s);
+if(adj_flag>3)//完成稳定再动
+{
+
+	adj=0;//调整次数归零
+	adj_flag=-adjed_flag;//成功次数归零//同时用来还原
+	adjed_flag=0;
+# endif
+		i++;
+# if ver==0
+}
+}
+else 
+{i++;}
+# endif
+					if(i==Ltime)//这里要改！！
+					{
+						i=0;
+						KillTimer(2);
+						loopt++;
+						if(loopt>=looptmax){ }
+					}
+					m_Hip1=(long)WalkLF[i];
+					m_Knee1=(long)WLFK[i];
+					UpdateData(false);
+				}
+				
+			}
+			break;
+		}

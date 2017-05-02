@@ -1,0 +1,346 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\XWRobot.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\XWRobot.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 XWRobot"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "XWRobot 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2014",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_XWROBOT_DIALOG DIALOGEX 0, 0, 633, 240
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "XWRobot"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,1,219,50,19
+    LTEXT           "Joint ID (1-9)",IDC_STATIC,425,60,57,8
+    EDITTEXT        IDC_EDIT_NodeID,485,57,46,15,ES_AUTOHSCROLL
+    LTEXT           "Profile Position Mode",IDC_STATIC_ActiveMode,435,31,85,8
+    EDITTEXT        IDC_EDIT_Target,472,142,47,14,ES_AUTOHSCROLL
+    LTEXT           "Target",IDC_STATIC,435,144,31,12
+    LTEXT           "Relative Move",IDC_STATIC,429,125,58,9
+    LTEXT           "S Position",IDC_STATIC,425,173,41,8
+    LTEXT           "RT Position",IDC_STATIC,422,199,45,8
+    EDITTEXT        IDC_EDIT_StartPosition,473,170,45,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_RTPosition,472,197,45,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Position Parameters",IDC_STATIC,421,97,119,126
+    GROUPBOX        "Joint Information",IDC_STATIC,421,8,119,79
+    PUSHBUTTON      "OpenDevice",IDC_BUTTON_OpenDevice,64,3,48,15
+    PUSHBUTTON      "Driver Setting",IDC_BUTTON_DeviceSettings,554,8,75,19
+    LTEXT           "Velocity",IDC_STATIC,553,38,33,8
+    LTEXT           "A Velocity",IDC_STATIC,547,57,41,8
+    LTEXT           "D Velocity",IDC_STATIC,547,79,41,8
+    EDITTEXT        IDC_EDIT_Velocity,593,37,36,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_AVelocity,593,55,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DVelocity,593,77,35,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enable",IDC_BUTTON_Enable,557,103,67,22
+    PUSHBUTTON      "Disable",IDC_BUTTON_Disable,557,127,68,22
+    PUSHBUTTON      "Move Relative",IDC_BUTTON_MoveRelative,557,151,67,22
+    PUSHBUTTON      "Halt",IDC_BUTTON_Halt,557,199,68,22
+    LTEXT           "qc",IDC_STATIC,522,144,9,8
+    LTEXT           "qc",IDC_STATIC,521,171,9,8
+    LTEXT           "qc",IDC_STATIC,521,198,9,8
+    PUSHBUTTON      "S-Joint>>",IDC_BUTTON_Solo,357,218,60,19
+    CONTROL         "",IDC_STATICSeparator,"Static",SS_BLACKFRAME | SS_SUNKEN,419,0,1,238
+    LTEXT           "Period",IDC_STATIC,34,29,25,8
+    EDITTEXT        IDC_EDIT_Period,68,27,40,13,ES_AUTOHSCROLL
+    LTEXT           "Amplitude Time",IDC_STATIC,8,46,57,8
+    EDITTEXT        IDC_EDIT_Amplitude,68,47,40,14,ES_AUTOHSCROLL
+    LTEXT           "Hip Backlash",IDC_STATIC,9,69,49,8
+    LTEXT           "Knee Backlash",IDC_STATIC,8,88,53,8
+    EDITTEXT        IDC_EDIT_HipBacklash,68,67,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_KneeBacklash,68,85,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enable",IDC_BUTTON_AEnable,66,123,50,14
+    PUSHBUTTON      "Disable",IDC_BUTTON_ADisable,66,143,50,14
+    PUSHBUTTON      "Walk",IDC_BUTTON_Walk,20,163,50,14
+    PUSHBUTTON      "Trot",IDC_BUTTON_Trot,110,163,50,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_Stop,63,203,52,29
+    PUSHBUTTON      "Mode Settings",IDC_BUTTON_ModeSettings,57,101,72,14
+    PUSHBUTTON      "Pause",IDC_BUTTON_Pause,20,184,50,14
+    PUSHBUTTON      "Continue",IDC_BUTTON_Continue,110,184,50,14
+    GROUPBOX        "Parameters",IDC_STATIC,4,18,185,100
+    EDITTEXT        IDC_EDIT_Hip1,2,133,30,14,ES_AUTOHSCROLL
+    LTEXT           "a",IDC_STATIC,126,35,8,8
+    LTEXT           "b",IDC_STATIC,127,53,8,8
+    LTEXT           "c",IDC_STATIC,126,71,8,8
+    EDITTEXT        IDC_EDIT_a,141,33,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_b,141,51,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_c,141,69,40,14,ES_AUTOHSCROLL
+    LTEXT           "Stride Width",IDC_STATIC,134,89,49,8,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_SW,137,101,39,14,ES_AUTOHSCROLL
+    LTEXT           "s",IDC_STATIC,108,29,8,8
+    LTEXT           "qc",IDC_STATIC,109,71,9,8
+    LTEXT           "qc",IDC_STATIC,108,88,9,8
+    GROUPBOX        "AM Coefficients",IDC_STATIC,120,23,66,64
+    LTEXT           "LFH",IDC_STATIC,19,120,13,8
+    LTEXT           "LFK",IDC_STATIC,43,119,13,8
+    EDITTEXT        IDC_EDIT_knee1,33,133,30,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_LF,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,123,115,14,41
+    CONTROL         "Slider1",IDC_SLIDER_LH,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,152,115,14,41
+    CONTROL         "Slider1",IDC_SLIDER_RF,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,115,14,42
+    CONTROL         "Slider1",IDC_SLIDER_RH,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,168,115,14,41
+    LTEXT           "LF",IDC_STATIC,122,156,9,8
+    LTEXT           "RF",IDC_STATIC,138,156,9,8
+    LTEXT           "LH",IDC_STATIC,156,155,9,8
+    LTEXT           "RH",IDC_STATIC,170,155,13,13
+    LTEXT           "0",IDC_STATIC,182,131,8,8
+    LTEXT           "mm",IDC_STATIC,176,103,9,8
+    LTEXT           "(Base:0.22 rad)",IDC_STATIC,6,54,61,8
+    EDITTEXT        IDC_EDIT_H,76,168,30,14,ES_AUTOHSCROLL
+    LTEXT           "Height IF",IDC_STATIC,72,185,38,14
+    EDITTEXT        IDC_EDIT_knee2,1,147,30,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OpenSTM32",IDC_BUTTON_OPEN,194,109,48,15
+    CONTROL         "",IDC_MSCOMM1,"{648A5600-2C6E-101B-82B6-000000000014}",NOT WS_VISIBLE | WS_TABSTOP,327,211,25,25
+    GROUPBOX        "接收",IDC_STATIC,192,11,75,31
+    GROUPBOX        "发送",IDC_STATIC,192,45,75,27
+    EDITTEXT        IDC_EDIT_Rev,198,24,64,13,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_Send,200,57,64,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    COMBOBOX        IDC_COMBO1,211,77,55,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "COM",IDC_STATIC,195,79,16,12
+    COMBOBOX        IDC_COMBO2,211,93,55,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "bps",IDC_STATIC,195,95,16,12
+    PUSHBUTTON      "EXIT",IDC_BUTTON_CLOSE,245,127,24,15,NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    PUSHBUTTON      "发",IDC_BUTTON_SEND,194,127,23,15,NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Move Absolute",IDC_BUTTON_Absolute,557,175,67,22
+    PUSHBUTTON      "Remember",IDC_BUTTON_Remember,273,148,67,22
+    PUSHBUTTON      "清",IDC_BUTTON_CLEAN,220,127,22,15,NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    GROUPBOX        "初始化",IDC_STATIC,271,11,144,195
+    LTEXT           "Hip   1°      Knee  1°",IDC_STATIC,299,21,97,8
+    LTEXT           "LF",IDC_STATIC,275,33,9,8
+    LTEXT           "RF",IDC_STATIC,275,51,9,8
+    LTEXT           "RH",IDC_STATIC,275,69,9,8
+    LTEXT           "LH",IDC_STATIC,275,87,9,8
+    EDITTEXT        IDC_EDIT_LFH,291,30,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LFK,356,30,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RFH,291,47,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RFK,356,47,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RHH,291,65,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RHK,356,65,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LHH,291,83,27,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LHK,356,83,27,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Move Relative",IDC_BUTTON_MoveRelative2,273,104,67,22
+    PUSHBUTTON      "Move Absolute",IDC_BUTTON_Absolute2,273,126,67,22
+    PUSHBUTTON      "test",IDC_BUTTON_Absolute3,273,170,67,22
+    PUSHBUTTON      "All+1000",IDC_BUTTON_MoveRelative3,341,104,40,22
+    PUSHBUTTON      "-1000",IDC_BUTTON_MoveRelative4,381,104,29,22
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative5,319,28,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative6,319,46,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative7,319,64,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative8,319,82,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative9,383,28,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative10,383,46,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative11,383,64,15,16
+    PUSHBUTTON      "+",IDC_BUTTON_MoveRelative12,383,82,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative13,334,28,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative14,334,46,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative15,334,64,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative16,334,82,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative17,398,28,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative18,398,46,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative19,398,64,15,16
+    PUSHBUTTON      "-",IDC_BUTTON_MoveRelative20,398,82,15,16
+    PUSHBUTTON      "Reset",IDC_BUTTON_MoveRelative21,341,126,40,22
+    CONTROL         "",IDC_SLIDER_roll,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,216,157,51,20
+    CONTROL         "",IDC_SLIDER_pit,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,191,143,25,49
+    EDITTEXT        IDC_EDIT_pit,187,192,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_roll,226,191,30,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "CAM",IDC_CAM,129,211,44,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "XWRobot Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "XWRobot"
+            VALUE "LegalCopyright", "版权所有 (C) 2014"
+            VALUE "OriginalFilename", "XWRobot.EXE"
+            VALUE "ProductName", "XWRobot 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_XWROBOT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 629
+        BOTTOMMARGIN, 238
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_XWROBOT_DIALOG DLGINIT
+BEGIN
+    IDC_MSCOMM1, 0x376, 102, 0
+0x0013, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0034, 0x0020, 0x4321, 0x1234, 0x0008, 0x0000, 0x03ed, 0x0000, 
+0x03ed, 0x0000, 0x5601, 0x648a, 0x0000, 0x0006, 0x0000, 0x0001, 0x0400, 
+0x0000, 0x0200, 0x0000, 0x2580, 0x0000, 0x0000, 0x0008, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x003f, 0x0000, 0x0001, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 XWRobot(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\XWRobot.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

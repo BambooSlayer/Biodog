@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: XWRobot - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\XiaoWei\AppData\Local\Temp\RSP2535.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/XWRobot.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Quadruped Analysis and control\XWRobot\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\XiaoWei\AppData\Local\Temp\RSP2535.tmp" 
+Creating temporary file "C:\Users\XiaoWei\AppData\Local\Temp\RSP2536.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/XWRobot.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Quadruped Analysis and control\XWRobot\XWRobot.cpp"
+"E:\Quadruped Analysis and control\XWRobot\XWRobotDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\XiaoWei\AppData\Local\Temp\RSP2536.tmp" 
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+XWRobot.cpp
+XWRobotDlg.cpp
+Generating Code...
+Creating command line "link.exe EposCmd.lib /nologo /subsystem:windows /incremental:no /pdb:"Debug/XWRobot.pdb" /machine:I386 /out:"Debug/XWRobot.exe" /pdbtype:sept  ".\Debug\StdAfx.obj" ".\Debug\XWRobot.obj" ".\Debug\XWRobotDlg.obj" ".\Debug\XWRobot.res" "
+<h3>Output Window</h3>
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+Creating command line "bscmake.exe /nologo /o"Debug/XWRobot.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\XWRobot.sbr" ".\Debug\XWRobotDlg.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+XWRobot.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

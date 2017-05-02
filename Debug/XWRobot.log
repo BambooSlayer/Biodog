@@ -1,0 +1,120 @@
+﻿生成启动时间为 2017/4/20 10:08:32。
+     1>项目“E:\robo\XWRobot\XWRobot.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“.\Debug\XWRobot.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I\fE:\robo\openCV\opencv\build\x86\vc10\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt XWRobotDlg.cpp
+         XWRobotDlg.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(549): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(112) : 参见“localtime”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(555): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(588): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(801): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1067): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1068): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1069): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1070): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1071): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1072): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1073): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1074): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1198): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1251): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1252): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1253): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1254): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1255): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1256): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1257): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1258): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1310): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1311): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1313): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1314): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1383): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1384): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1385): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1386): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1387): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1388): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1389): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1390): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1445): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1446): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1448): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1449): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1589): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1643): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1657): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(1711): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2285): warning C4996: 'asctime': This function or variable may be unsafe. Consider using asctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.h(153) : 参见“asctime”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2287): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2288): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2289): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2367): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2396): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : 参见“strtok”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2473): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : 参见“strtok”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2487): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2488): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2580): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2581): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2584): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2587): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2591): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2594): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2598): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2601): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2605): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2608): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2612): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2615): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\robo\xwrobot\xwrobotdlg.cpp(2706): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\XWRobot.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:E:\robo\openCV\opencv\build\x86\vc10\lib EposCmd.lib opencv_ts300d.lib opencv_world300d.lib /MANIFEST /ManifestFile:".\Debug\XWRobot.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"E:\robo\XWRobot\Debug\XWRobot.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\XWRobot.lib" /MACHINE:X86 .\Debug\XWRobot.res
+         .\Debug\CMSComm.obj
+         .\Debug\StdAfx.obj
+         .\Debug\XWRobot.obj
+         .\Debug\XWRobotDlg.obj
+     1>CMSComm.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:ICF”规范)
+         XWRobot.vcxproj -> E:\robo\XWRobot\.\Debug\XWRobot.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Debug\XWRobot.exe;#1" /manifest .\Debug\XWRobot.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\XWRobot.bsc" .\Debug\CMSComm.sbr .\Debug\StdAfx.sbr .\Debug\XWRobot.sbr .\Debug\XWRobotDlg.sbr
+       FinalizeBuildStatus:
+         正在删除文件“.\Debug\XWRobot.unsuccessfulbuild”。
+         正在对“.\Debug\XWRobot.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\robo\XWRobot\XWRobot.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.55
